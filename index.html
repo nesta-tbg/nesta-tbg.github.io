@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Symbolic Rules over Abstract Meaning Representations for Textual Reinforcement Learning">
+  <meta name="keywords" content="NESTA, TextWorld, Neuro Symbolic AI, Abstract Meaning Representation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Symbolic Rules over Abstract Meaning Representations for Textual Reinforcement Learning</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">NESTA: Learning Symbolic Rules over Abstract Meaning Representations for Textual Reinforcement Learning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://research.ibm.com/people/subhajit-chaudhury">Subhajit Chaudhury</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=LIHU5U8AAAAJ&hl=en">Sarath Swaminathan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://research.ibm.com/people/daiki-kimura">Daiki Kimura</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Ah5WCLwAAAAJ&hl=en">Prithviraj Sen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=-698GEMAAAAJ&hl=en">Keerthiram Murugesan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-rosariou">Rosario Uceda-Sosa</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://research.ibm.com/people/michiaki-tatsubori">Michiaki Tatsubori</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-achille">Achille Fokoue</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-kapanipa">Pavan Kapanipathi</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://research.ibm.com/people/asim-munawar">Asim Munawar</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://researcher.watson.ibm.com/researcher/view.php?person=ibm-Alexander.Gray">Alexander Gray</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">IBM Research</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://virtual2023.aclweb.org/paper_P4415.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2307.02689"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/IBM/LOA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/overview.png"
+           class="interpolation-image"
+           alt="Overview"/>
+
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">NESTA</span> (NEuro Symbolic Textual Agent) is a modular approach 
+        comprising a generic semantic parser with a symbolic rule induction system that 
+        learns human-interpretable rules
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-based reinforcement learning agents have predominantly been neural network-based models with embeddings-based representation, 
+            learning uninterpretable policies that often do not generalize well to unseen games. On the other hand, neuro-symbolic methods, 
+            specifically those that leverage an intermediate formal representation, are gaining significant attention in language understanding tasks. 
+            This is because of their advantages ranging from inherent interpretability, the lesser requirement of training data, and being generalizable 
+            in scenarios with unseen data. Therefore, in this paper, we propose a modular, NEuro-Symbolic Textual Agent (NESTA) that combines a generic 
+            semantic parser with a rule induction system to learn abstract interpretable rules as policies. Our experiments on established text-based 
+            game benchmarks show that the proposed NESTA method outperforms deep reinforcement learning-based techniques by achieving better generalization 
+            to unseen test games and learning from fewer training interactions.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+      <!-- NESTA -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">NEuro-Symbolic Textual Agent (NESTA)</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            NESTA comprises of the following components:
+            <ul>
+              <li>Semantic Parser: Parses textual input to generic domain-agnostic symbolic representation  using Abstract Meaning Representation (AMR)</li>
+              <li>Rule Learner: Learns interpretable action rules using Logical Neural Networks (LNN) [1] as the differentiable rule learning engine 
+                via expected reward maximization</li>
+              <li>Action Pruner: Use look-ahead to prune actions that do contribute to future reward to tackle the large action space problem in TBGs</li>
+            </ul>
+          </p>
+          <img src="./static/images/nesta.png"
+           class="interpolation-image"
+           alt="NESTA"/>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <!--/ NESTA -->
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Deep RL</h2>
+          <p>
+            Example trajectory of a Deep RL agent for a game with easy level difficulty. 
+            Deep RL agent is based on BiKE (Murugesan et al., 2021), which leverages graph structures in both textual and commonsense information
+          </p>
+          <video id="deeprl" controls muted playsinline height="100%">
+            <source src="./static/videos/DeepRL.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">NESTA</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Example trajectory of a NESTA agent for a game with easy level difficulty. 
+              Human interpretable trained rules and extracted logical facts are shown at each step along with the recommended actions.
+            </p>
+            <video id="nesta" controls muted playsinline height="100%">
+              <source src="./static/videos/NESTA.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+      <!-- Results -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experimental Results</h2>
+
+        <div class="content has-text-justified">
+          <img src="./static/images/results_1.png"
+           class="interpolation-image"
+           alt="NESTA"/>
+           <p>
+            Proposed NESTA model shows better performance in terms of normalized score and steps to reach the goal compared to Deep RL 
+            methods on unseen TWC in-distribution games.
+           </p>
+           <br/>
+           <img src="./static/images/results_2.png"
+           class="interpolation-image"
+           alt="NESTA"/>
+           <p>
+            Normalized score and number of steps to reach the final goal for various methods on unseen TWC out-of-distribution games. 
+            NESTA shows large improvements over previous Deep RL methods, especially for hard games. 
+           </p>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <!--/ Results -->
+
+    <!-- Related Work -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">References</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <a href="https://arxiv.org/abs/2006.13155">Ryan Riegel et al. 2020. Logical neural networks. arXiv preprint arXiv:2006.13155.</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2001.08837">Prithviraj Ammanabrolu and Matthew Hausknecht. 2020. Graph constrained reinforcement learning for natural language action spaces. In ICLR 2020</a>
+          </p>
+          <p>
+            <a href="https://aclanthology.org/2021.acl-short.91/">Keerthiram Murugesan, et al. 2021. Efficient text-based reinforcement learning by jointly leveraging state and commonsense graph representations. ACL 2021</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2110.08470">Mattia Atzeni, Shehzaad Zuzar Dhuliawala, Keerthiram Murugesan, and Mrinmaya Sachan. 2021. Case-based reasoning for better generalization in textual reinforcement learning. In ICLR 2021</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Chaudhury2023nesta,
+  author    = {Chaudhury, Subhajit and Swaminathan, Sarath and Kimura, Daiki and Sen, Prithviraj and Murugesan, Keerthiram and Uceda-Sosa, Rosario and Tatsubori, Michiaki and Fokoue, Achille and Kapanipathi, Pavan and Munawar, Asim and Gray, Alexander},
+  title     = {Learning Symbolic Rules over Abstract Meaning Representations for Textual Reinforcement Learning},
+  journal   = {ACL},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
